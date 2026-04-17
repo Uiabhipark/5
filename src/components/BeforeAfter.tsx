@@ -14,22 +14,22 @@ export const BeforeAfter: React.FC = () => {
   };
 
   return (
-    <section id="gallery" className="py-32 px-6 bg-black text-white overflow-hidden">
+    <section id="gallery" className="py-20 sm:py-32 px-4 sm:px-6 bg-black text-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 sm:mb-20 gap-8">
           <div className="max-w-xl">
-            <h2 className="font-display text-4xl md:text-6xl font-extrabold mb-6">Visible Results.</h2>
-            <p className="text-white/50 text-lg">See the transformation for yourself. Our cosmetic procedures are designed to enhance your natural beauty with precision.</p>
+            <h2 className="font-sans text-3xl sm:text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">Visible Results.</h2>
+            <p className="text-white/50 text-base sm:text-lg">See the transformation for yourself. Our cosmetic procedures are designed to enhance your natural beauty with precision.</p>
           </div>
-          <div className="flex gap-4">
-            <div className="px-6 py-3 rounded-full border border-white/10 text-sm font-bold">1,200+ Cases</div>
-            <div className="px-6 py-3 rounded-full bg-white text-black text-sm font-bold">Gallery</div>
+          <div className="flex flex-wrap gap-3 sm:gap-4">
+            <div className="px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-white/10 text-xs sm:text-sm font-bold">1,200+ Cases</div>
+            <div className="px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-white text-black text-xs sm:text-sm font-bold">Gallery</div>
           </div>
         </div>
 
         <div 
           ref={containerRef}
-          className="relative aspect-[16/9] w-full max-w-5xl mx-auto rounded-[40px] overflow-hidden cursor-ew-resize select-none border border-white/10"
+          className="relative aspect-square sm:aspect-video lg:aspect-[16/9] w-full max-w-5xl mx-auto rounded-2xl sm:rounded-[40px] overflow-hidden cursor-ew-resize select-none border border-white/10"
           onMouseMove={handleMove}
           onTouchMove={handleMove}
         >

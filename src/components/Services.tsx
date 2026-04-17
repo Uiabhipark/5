@@ -25,11 +25,11 @@ const services = [
 
 export const Services: React.FC = () => {
   return (
-    <section id="services" className="py-32 px-12 relative">
+    <section id="services" className="py-20 sm:py-32 px-6 sm:px-12 relative">
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="mb-20">
-          <h2 className="font-sans text-4xl md:text-5xl font-bold text-black mb-4 tracking-tight">Our Expertise</h2>
-          <p className="text-gray-muted max-w-xl">Tailored treatments delivered with precision and care.</p>
+        <div className="mb-12 sm:mb-20 text-center lg:text-left">
+          <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 tracking-tight">Our Expertise</h2>
+          <p className="text-gray-muted max-w-xl mx-auto lg:mx-0">Tailored treatments delivered with precision and care.</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">

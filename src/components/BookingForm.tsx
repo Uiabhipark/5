@@ -4,32 +4,32 @@ import { Calendar, User, Mail, Phone, ChevronRight } from 'lucide-react';
 
 export const BookingForm: React.FC = () => {
   return (
-    <section id="book" className="py-32 px-12 relative">
+    <section id="book" className="py-20 sm:py-32 px-4 sm:px-12 relative">
       <div className="max-w-4xl mx-auto">
-        <div className="bg-brand-primary p-12 md:p-16 rounded-3xl relative overflow-hidden shadow-2xl text-white">
+        <div className="bg-brand-primary p-8 sm:p-12 md:p-16 rounded-2xl sm:rounded-3xl relative overflow-hidden shadow-2xl text-white">
           {/* Decorative Teal Glow */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-brand-accent/40 rounded-full blur-[40px] opacity-50 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-brand-accent/40 rounded-full blur-[40px] opacity-50 pointer-events-none" />
           
           <div className="relative z-10">
-            <div className="mb-12">
-              <h2 className="font-sans text-3xl md:text-4xl font-bold mb-2 tracking-tight">Begin Your Journey</h2>
-              <p className="text-white/40 text-sm">Same-day consultations available for new patients.</p>
+            <div className="mb-8 sm:mb-12">
+              <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl font-bold mb-2 tracking-tight">Begin Your Journey</h2>
+              <p className="text-white/40 text-xs sm:text-sm">Same-day consultations available for new patients.</p>
             </div>
 
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-4 sm:space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="space-y-2">
-                <label className="text-[11px] font-bold uppercase tracking-widest text-gray-muted">Full Name</label>
+                <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-gray-muted">Full Name</label>
                 <input 
                   type="text" 
                   placeholder="Julianne Smith"
-                  className="w-full bg-[#171717] border border-[#262626] rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-brand-accent transition-all"
+                  className="w-full bg-[#171717] border border-[#262626] rounded-lg py-2.5 sm:py-3 px-4 text-sm text-white focus:outline-none focus:border-brand-accent transition-all placeholder:text-white/20"
                 />
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="space-y-2">
-                  <label className="text-[11px] font-bold uppercase tracking-widest text-gray-muted">Service</label>
-                  <select className="w-full bg-[#171717] border border-[#262626] rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-brand-accent transition-all appearance-none cursor-pointer">
+                  <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-gray-muted">Service</label>
+                  <select className="w-full bg-[#171717] border border-[#262626] rounded-lg py-2.5 sm:py-3 px-4 text-sm text-white focus:outline-none focus:border-brand-accent transition-all appearance-none cursor-pointer">
                     <option>Cosmetic Dentistry</option>
                     <option>General Checkup</option>
                     <option>Orthodontics</option>
@@ -37,25 +37,25 @@ export const BookingForm: React.FC = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-[11px] font-bold uppercase tracking-widest text-gray-muted">Preferred Date</label>
+                  <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-gray-muted">Preferred Date</label>
                   <input 
                     type="date" 
-                    className="w-full bg-[#171717] border border-[#262626] rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-brand-accent transition-all"
+                    className="w-full bg-[#171717] border border-[#262626] rounded-lg py-2.5 sm:py-3 px-4 text-sm text-white focus:outline-none focus:border-brand-accent transition-all"
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-[11px] font-bold uppercase tracking-widest text-gray-muted">Email Address</label>
+                <label className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-gray-muted">Email Address</label>
                 <input 
                   type="email" 
                   placeholder="hello@domain.com"
-                  className="w-full bg-[#171717] border border-[#262626] rounded-lg py-3 px-4 text-sm text-white focus:outline-none focus:border-brand-accent transition-all"
+                  className="w-full bg-[#171717] border border-[#262626] rounded-lg py-2.5 sm:py-3 px-4 text-sm text-white focus:outline-none focus:border-brand-accent transition-all placeholder:text-white/20"
                 />
               </div>
 
-              <div className="pt-4">
-                <button className="group relative w-full bg-white text-black py-4 rounded-lg font-bold text-sm uppercase tracking-widest overflow-hidden transition-all hover:shadow-2xl active:scale-[0.98]">
+              <div className="pt-2 sm:pt-4">
+                <button className="group relative w-full bg-white text-black py-4 rounded-lg font-bold text-xs sm:text-sm uppercase tracking-widest overflow-hidden transition-all hover:shadow-2xl active:scale-[0.98]">
                   <span className="relative z-10">Confirm Appointment Request</span>
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0%,transparent_25%,#0d9488_50%,transparent_75%,transparent_100%)]" />
@@ -63,12 +63,13 @@ export const BookingForm: React.FC = () => {
                 </button>
               </div>
               
-              <p className="text-center mt-6 text-[11px] text-white/40">No pressure. No hidden fees. Just clarity.</p>
+              <p className="text-center mt-4 sm:mt-6 text-[10px] sm:text-[11px] text-white/40">No pressure. No hidden fees. Just clarity.</p>
             </form>
           </div>
         </div>
       </div>
     </section>
+
   );
 };
 

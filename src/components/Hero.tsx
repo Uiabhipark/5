@@ -4,37 +4,37 @@ import { ChevronDown } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 px-12 overflow-hidden">
-      <div className="relative z-10 w-full max-w-7xl mx-auto grid lg:grid-cols-[1.2fr_1fr] gap-12 items-center">
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 px-6 sm:px-12 overflow-hidden">
+      <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-left"
+          className="text-center lg:text-left flex flex-col items-center lg:items-start"
         >
-          <h1 className="font-sans text-7xl md:text-8xl font-bold tracking-tighter text-black mb-8 leading-[0.95] text-balance">
+          <h1 className="font-sans text-5xl sm:text-7xl md:text-8xl font-bold tracking-tighter text-black mb-8 leading-[0.95] text-balance">
             Your Smile.<br />
             Perfected.
           </h1>
-          <p className="text-lg md:text-xl text-gray-muted max-w-lg mb-10 leading-relaxed text-balance">
+          <p className="text-base sm:text-lg md:text-xl text-gray-muted max-w-lg mb-10 leading-relaxed text-balance">
             Next-generation dental precision meets boutique care. Experience clinical excellence wrapped in refined elegance.
           </p>
 
-          <div className="flex flex-wrap gap-12 mb-12">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-8 sm:gap-12 mb-12">
             {[
               { label: "Transformations", value: "1,200+" },
               { label: "Excellence", value: "15Y" },
               { label: "Rating", value: "4.9" }
             ].map((stat, i) => (
               <div key={i} className="flex flex-col">
-                <span className="text-2xl font-bold text-black">{stat.value}</span>
+                <span className="text-xl sm:text-2xl font-bold text-black">{stat.value}</span>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-gray-muted">{stat.label}</span>
               </div>
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <button className="group relative px-8 py-4 bg-black text-white rounded-lg font-bold text-sm uppercase tracking-widest overflow-hidden transition-all hover:shadow-2xl active:scale-95">
+          <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+            <button className="group relative w-full sm:w-auto px-8 py-4 bg-black text-white rounded-lg font-bold text-sm uppercase tracking-widest overflow-hidden transition-all hover:shadow-2xl active:scale-95 text-center">
               <span className="relative z-10">Book Appointment</span>
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <div className="absolute inset-[-100%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_0%,transparent_25%,#0d9488_50%,transparent_75%,transparent_100%)]" />
@@ -47,18 +47,18 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="hidden lg:block relative"
+          className="relative max-w-2xl mx-auto lg:max-w-none"
         >
-          <div className="relative z-10 rounded-[32px] overflow-hidden shadow-2xl border border-black/5">
+          <div className="relative z-10 rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-2xl border border-black/5">
             <img 
               src="https://picsum.photos/seed/dental-hero/800/1000" 
               alt="Premium Dental Care" 
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-cover aspect-[4/5] lg:aspect-auto"
               referrerPolicy="no-referrer"
             />
           </div>
           {/* Decorative Teal Glow */}
-          <div className="absolute -top-10 -right-10 w-64 h-64 bg-brand-accent/10 rounded-full blur-3xl" />
+          <div className="absolute -top-10 -right-10 w-48 h-48 sm:w-64 sm:h-64 bg-brand-accent/10 rounded-full blur-3xl" />
         </motion.div>
       </div>
 

@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="text-[11px] font-bold uppercase tracking-widest text-gray-muted">
-          © 2024 LUMINA CLINIC. ALL RIGHTS RESERVED.
+          © 2024 DENTAL CLUB. ALL RIGHTS RESERVED.
         </div>
 
         <div className="text-[11px] font-bold uppercase tracking-widest text-gray-muted">
